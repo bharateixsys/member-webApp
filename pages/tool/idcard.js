@@ -19,8 +19,6 @@ import { Pager } from "@progress/kendo-react-data-tools";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 import { orderBy } from "@progress/kendo-data-query";
 import ToastService from "@services/ToastService";
-//import { createSignalRConnection } from "@services/SignalRService";
-import { createSignalRConnection, stopConnection } from "@services/SignalRService";
 import { fetchMembersWithUrls } from "@services/MemberListService";
 import { fetchMemberCard } from "@services/fetchMemberCard";
 import MemberCardModal from "../tool/MemberCardModal";
@@ -54,39 +52,6 @@ export default function MemberDetailList() {
         { text: "Ascending", value: "asc" },
         { text: "Descending", value: "desc" },
     ];
-
-
-    useEffect(() => {
-        const userId = localStorage.getItem("userId");
-        if (!userId) {
-            console.log("userId not found");
-            return;
-        }
-
-        let connection;
-
-        const initConnection = async () => {
-            connection = await createSignalRConnection(userId, (rmemberId, fileUrl) => {
-                setFileUrls((prev) => ({
-                    ...prev,
-                    [rmemberId]: fileUrl,
-                }));
-              //  ToastService.success(`ID Card Generated Successfully ${rmemberId}`);
-            });
-
-            if (!connection) {
-                console.log("Notification service is unavailable.");
-            }
-        };
-
-        initConnection();
-
-        return () => {
-            if (connection) {
-                connection.stop().catch((err) => console.warn("SignalR stop error:", err));
-            }
-        };
-    }, []);
 
     useEffect(() => {
         const token = localStorage.getItem("token");
