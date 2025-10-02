@@ -52,4 +52,4 @@ jobs:
           app-name: 'qa-sen-member'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_768FADFF03EB45EB85EF46975FAB2DE2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0972EB4BFDD44F51A4C371A3EEDD7482 }}
