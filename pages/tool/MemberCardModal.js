@@ -10,9 +10,9 @@ import {
 //D: \A New Theme Member\member - dashboard - nextjs\styles\idcard.css
 //import styles from "../styles/idcard.css";
 import styles from "../../styles/idcard.module.css";
-import logo from "../images/SenderoHealthPlans_PrimaryLogo.jpg";
-import logoIDBack from "../images/SenderoHealthPlans_PrimaryLogo_icard.png";
-import Navitus_2 from "../images/Navitus_2.png";
+import logo from "images/SenderoHealthPlans_PrimaryLogo.jpg";
+import logoIDBack from "images/SenderoHealthPlans_PrimaryLogo_icard.png";
+import Navitus_2 from "images/Navitus_2.png";
 import Head from "next/head";
 
 console.log(styles);
