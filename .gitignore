@@ -1,0 +1,20 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Next.js build output
+.next
+out
+
+# Logs
+logs
+*.log
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Visual Studio files
+.vs
+*.vscode
