@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "preinstall": "npm install --platform=linux --arch=x64 sharp",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
